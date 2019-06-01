@@ -1,0 +1,5 @@
+﻿  VisualGDB: Sending 6 updated source files to build machine...
+  VisualGDB: Run "make  CONFIG=Debug" in directory "/tmp/VisualGDB/c/Users/jhn/source/repos/shumeipaixuexi/Test_oled/test_oled" on root@192.168.1.144 (SSH)
+  mkdir Debug
+  g++ -std=gnu++11 -ggdb -ffunction-sections -O0  -lwiringPi  -DDEBUG=1  -c test_oled.cpp -o Debug/test_oled.o -MD -MF Debug/test_oled.dep
+  g++ -o Debug/test_oled -Wl,-gc-sections -lwiringPi   -Wl,--start-group Debug/test_oled.o   -Wl,--rpath='$ORIGIN'   -Wl,--end-group

@@ -1,0 +1,27 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_oled", "test_oled\test_oled.vcxproj", "{3A78AE01-D69E-46BC-9639-3C34D4F6B925}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A78AE01-D69E-46BC-9639-3C34D4F6B925}.Debug|x64.ActiveCfg = Debug|Win32
+		{3A78AE01-D69E-46BC-9639-3C34D4F6B925}.Debug|x86.ActiveCfg = Debug|Win32
+		{3A78AE01-D69E-46BC-9639-3C34D4F6B925}.Debug|x86.Build.0 = Debug|Win32
+		{3A78AE01-D69E-46BC-9639-3C34D4F6B925}.Release|x64.ActiveCfg = Release|Win32
+		{3A78AE01-D69E-46BC-9639-3C34D4F6B925}.Release|x86.ActiveCfg = Release|Win32
+		{3A78AE01-D69E-46BC-9639-3C34D4F6B925}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12E19923-B6F7-4824-8145-71C79B06D812}
+	EndGlobalSection
+EndGlobal
