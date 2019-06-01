@@ -16,5 +16,5 @@
 ##问题反馈
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
 
-* 邮件(jiang.hannan@foxmail.com)
+* E-mail：jiang.hannan@foxmail.com
 * QQ: 550889884
