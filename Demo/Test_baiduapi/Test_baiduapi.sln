@@ -1,0 +1,50 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test_baiduapi", "Test_baiduapi\Test_baiduapi.vcxproj", "{C7D67C2A-2771-41E0-A63C-2B0148E7120B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|VisualGDB = Debug|VisualGDB
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		MinSizeRel|VisualGDB = MinSizeRel|VisualGDB
+		MinSizeRel|x64 = MinSizeRel|x64
+		MinSizeRel|x86 = MinSizeRel|x86
+		Release|VisualGDB = Release|VisualGDB
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+		RelWithDebInfo|VisualGDB = RelWithDebInfo|VisualGDB
+		RelWithDebInfo|x64 = RelWithDebInfo|x64
+		RelWithDebInfo|x86 = RelWithDebInfo|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.Debug|VisualGDB.ActiveCfg = Debug|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.Debug|x64.ActiveCfg = Debug|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.Debug|x86.ActiveCfg = Debug|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.Debug|x86.Build.0 = Debug|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.MinSizeRel|VisualGDB.ActiveCfg = Release|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.MinSizeRel|VisualGDB.Build.0 = Release|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.MinSizeRel|x64.ActiveCfg = Release|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.MinSizeRel|x64.Build.0 = Release|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.MinSizeRel|x86.ActiveCfg = Release|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.MinSizeRel|x86.Build.0 = Release|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.Release|VisualGDB.ActiveCfg = Release|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.Release|x64.ActiveCfg = Release|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.Release|x86.ActiveCfg = Release|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.Release|x86.Build.0 = Release|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.RelWithDebInfo|VisualGDB.ActiveCfg = Release|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.RelWithDebInfo|VisualGDB.Build.0 = Release|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.RelWithDebInfo|x64.ActiveCfg = Release|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.RelWithDebInfo|x64.Build.0 = Release|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.RelWithDebInfo|x86.ActiveCfg = Release|Win32
+		{C7D67C2A-2771-41E0-A63C-2B0148E7120B}.RelWithDebInfo|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7D61B6F-2E86-483F-9D9E-DAF879AF6D69}
+	EndGlobalSection
+EndGlobal
