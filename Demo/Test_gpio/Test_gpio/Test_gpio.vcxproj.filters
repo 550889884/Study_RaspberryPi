@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source files">
+      <UniqueIdentifier>{4ca7e18a-5bf2-4cdb-b8f1-06d5471ad080}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{ea66c0ab-143c-4252-957c-cf3285ba8e50}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource files">
+      <UniqueIdentifier>{ef948412-0280-4ae6-9462-1c02a8f0f73d}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Make files">
+      <UniqueIdentifier>{5fcf335c-cf44-4f80-9752-3b4b92f17ffc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VisualGDB settings">
+      <UniqueIdentifier>{d09b2c49-c39d-4900-bb44-488c2a1b22d1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Test_gpio.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <None Include="debug.mak">
+      <Filter>Make files</Filter>
+    </None>
+    <None Include="release.mak">
+      <Filter>Make files</Filter>
+    </None>
+    <None Include="Test_gpio-Debug.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="Test_gpio-Release.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+  </ItemGroup>
+</Project>

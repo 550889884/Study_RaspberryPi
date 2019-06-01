@@ -1,0 +1,4 @@
+﻿  VisualGDB: Sending 1 updated source file to build machine...
+  VisualGDB: Run "make  CONFIG=Debug" in directory "/home/pi/test/c/Users/jhn/source/repos/shumeipaixuexi/Demo/Test_gpio/Test_gpio" on root@192.168.1.144 (SSH)
+  g++ -std=gnu++11 -ggdb -ffunction-sections -O0 -lwiringPi  -DDEBUG=1  -c Test_gpio.cpp -o Debug/Test_gpio.o -MD -MF Debug/Test_gpio.dep
+  g++ -o Debug/Test_gpio -Wl,-gc-sections -lwiringPi   -Wl,--start-group Debug/Test_gpio.o   -Wl,--rpath='$ORIGIN'   -Wl,--end-group
