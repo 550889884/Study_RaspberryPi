@@ -1,5 +1,5 @@
-﻿  VisualGDB: Sending 6 updated source files to build machine...
-  VisualGDB: Run "make  CONFIG=Debug" in directory "/tmp/VisualGDB/c/Users/jhn/source/repos/shumeipaixuexi/Test_oled/test_oled" on root@192.168.1.144 (SSH)
-  mkdir Debug
-  g++ -std=gnu++11 -ggdb -ffunction-sections -O0  -lwiringPi  -DDEBUG=1  -c test_oled.cpp -o Debug/test_oled.o -MD -MF Debug/test_oled.dep
-  g++ -o Debug/test_oled -Wl,-gc-sections -lwiringPi   -Wl,--start-group Debug/test_oled.o   -Wl,--rpath='$ORIGIN'   -Wl,--end-group
+﻿  VisualGDB: No file changes detected. If you believe it's a mistake, please clean the project and build it again.
+  VisualGDB: Run "make  CONFIG=Debug" in directory "/home/pi/test/test_oled/c/Users/jhn/source/repos/shumeipaixuexi/Demo/Test_oled/test_oled" on root@192.168.1.144 (SSH)
+make : warning : File 'Debug/test_oled.dep' has modification time 12 s in the future
+  make: Nothing to be done for 'all'.
+make : warning : Clock skew detected.  Your build may be incomplete.

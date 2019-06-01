@@ -1,31 +1,36 @@
 #include <wiringPi.h>
 #include <wiringPiI2C.h>
-#include <time.h>
-#include <stdio.h>  
-#include <stdlib.h>  
+
 #include <string.h>  
+#include <stdlib.h>
+#include <signal.h>
+
+
 #include <errno.h>  
 #include <unistd.h> 
 #include <netdb.h>  
 #include <net/if.h>  
 #include <arpa/inet.h>  
-#include <sys/ioctl.h>  
-#include <sys/types.h>  
+
 #include <sys/socket.h> 
 #include <ifaddrs.h>
 #include <netinet/in.h> 
-#include <stdlib.h>
-#include <sys/vfs.h>
-#include <signal.h>
-#include <sys/stat.h>
+
+#include <stdio.h>  
 #include <iostream>
+
+#include <sys/vfs.h>
+#include <sys/stat.h>
 #include <sys/time.h>
+#include <sys/ioctl.h>  
+#include <sys/types.h>  
+#include <sys/sysinfo.h>
 
 #define IP_SIZE     16 
 
 int fd;
 char  yi[4][16] = {
-"jianghn",//第一行
+"",//第一行
 "",//第二行
 "",//第三行
 "" //第四行
@@ -611,50 +616,21 @@ int get_local_ip(char *ip)
 	return 0;
 }
 
-void ntpdate() {
-	char *hostname = (char *)"200.20.186.76"; //NTP IP
-	int portno = 123;     //NTP is port 123
-	int maxlen = 1024;        //check our buffers
-	int i;          // misc var i
-	unsigned char msg[48] = { 010,0,0,0,0,0,0,0,0 };    // the packet we send
-	unsigned long  buf[maxlen]; // the buffer we get back
-	//struct in_addr ipaddr;        //  
-	struct protoent *proto;     //
-	struct sockaddr_in server_addr;
-	int s;  // socket
-	long tmit;   // the time -- This is a time_t sort of
-
-
-
-	proto = getprotobyname("udp");
-	s = socket(PF_INET, SOCK_DGRAM, proto->p_proto);
-	perror("socket");
-	memset(&server_addr, 0, sizeof(server_addr));
-	server_addr.sin_family = AF_INET;
-	server_addr.sin_addr.s_addr = inet_addr(hostname);
-	server_addr.sin_port = htons(portno);
-	
-
-	// send the data
-	printf("sending data..\n");
-	i = sendto(s, msg, sizeof(msg), 0, (struct sockaddr *)&server_addr, sizeof(server_addr));
-	perror("sendto");
-	// get the data back
-	struct sockaddr saddr;
-	socklen_t saddr_l = sizeof(saddr);
-	i = recvfrom(s, buf, 48, 0, &saddr, &saddr_l);
-	perror("recvfr:");
-	tmit = ntohl((time_t)buf[4]);    //# get transmit time
-	printf("tmit=%d\n",tmit);
-	tmit -= 2208988800U;
-	printf("tmit=%d\n",tmit);
-
-	 //#compare to system time
-	timeval p;
-	p.tv_sec = tmit;
-	settimeofday(&p, NULL);
-	i = time(0);
-	printf("System time is %d seconds off\n",(i-tmit));
+int get_sysRunTime(void)
+{
+	struct sysinfo info;
+	if (sysinfo(&info)) {
+		fprintf(stderr, "Failed to get sysinfo, errno:%u, reason:%s\n", errno, strerror(errno));
+		return -1;
+	}
+	long timenum = info.uptime;
+	int runday = timenum / 86400;
+	int runhour = (timenum % 86400) / 3600;
+	int runmin = (timenum % 3600) / 60;
+	int runsec = timenum % 60;
+	sprintf(yi[0], "Run:%dDay%d:%d:%d", runday, runhour, runmin, runsec);
+	printf("%s\n", yi[0]);
+	return 0;
 }
 
 void shijian(void)//当前时间
@@ -666,10 +642,13 @@ void shijian(void)//当前时间
 	p.tv_sec += 25200;
 	lt = p.tv_sec;
 	ptr = localtime(&lt);
+
+	get_sysRunTime();
+
 	strftime(yi[1], 16, "%y/%m/%d %a", ptr); //月/日 周几
 	strftime(yi[2], 16, "%I:%M %p", ptr);//时:分 am或pm
-}
 
+}
 
 int main(void)
 {
@@ -677,15 +656,14 @@ int main(void)
 	qingping();
 	const int VCC = 7;
 	pinMode(VCC, OUTPUT);
-	digitalWrite(VCC, HIGH);
-	get_local_ip(yi[3]);
-	ntpdate();
+	digitalWrite(VCC, HIGH);	
 	while (1)
 	{
+		get_local_ip(yi[3]);
 		shijian();
 		ascii();
-		printf("Time: %s", yi[2]);
-		delay(10000);		
+		printf("Time: %s \n", yi[2]);
+		delay(100);		
 	}
 }
 
